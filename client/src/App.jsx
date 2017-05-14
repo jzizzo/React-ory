@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StudentList from './StudentList.jsx';
 
 class App extends Component {
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome to React-ory</h1>
+        <StudentList />
       </div>
     );
   }
