@@ -6,10 +6,10 @@ class StudentEntry extends Component {
   }
 
   render() {
-
+    const { student } = this.props;
     return (
       <div>
-        Some Student
+        {student.name}
       </div>
     );
   }
