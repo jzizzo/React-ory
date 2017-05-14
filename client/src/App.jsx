@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import StudentList from './StudentList.jsx';
+import Form from './Form.jsx';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
-      nextId: 4,
       students: [{
         id: 1,
         name: 'Shawn'},
@@ -18,20 +17,11 @@ class App extends Component {
         name: 'Armen'}
       ]
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.addStudent = this.addStudent.bind(this);
   }
 
-
-
-  handleSubmit(event) {
-    let newStudent = {id: this.state.nextId, name: this.state.value};
-    this.setState({students: [...this.state.students, newStudent], nextId: this.state.nextId + 1});
-    event.preventDefault();
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  addStudent (newStudent) {
+    this.setState({students: [...this.state.students, newStudent]});
   }
 
   render () {
@@ -39,21 +29,11 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome to React-ory</h1>
-        <StudentList students={students}/>
-        <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+        <StudentList students={students} />
+        <Form addStudent={this.addStudent}/>
       </div>
     );
   }
-
 }
 
 export default App;
