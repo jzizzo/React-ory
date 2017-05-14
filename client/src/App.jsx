@@ -5,18 +5,8 @@ import Form from './Form.jsx';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      students: [{
-        id: 1,
-        name: 'Shawn'},
-      {
-        id: 2,
-        name: 'Joe'},
-      {
-        id: 3,
-        name: 'Armen'}
-      ]
-    };
+    console.log(props);
+    this.state = props;
     this.addStudent = this.addStudent.bind(this);
   }
 
