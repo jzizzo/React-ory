@@ -13,17 +13,20 @@ const config = {
 };
 
 
-console.log('herro?')
 const fb = firebase
   .initializeApp(config)
   .database()
   .ref();
 
+const addStudent = data => fb.child('students').push(data, response => response);
+const actions = {
+  addStudent
+};
+
 fb.on('value', snapshot => {
-  console.log('we outchea')
   const store = snapshot.val();
   ReactDOM.render(
-    <App {...store} />,
+    <App {...actions} {...store} />,
     document.getElementById('app')
   );
 });

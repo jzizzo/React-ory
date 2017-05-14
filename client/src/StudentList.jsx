@@ -3,8 +3,9 @@ import StudentEntry from './StudentEntry.jsx';
 
 let StudentList = (props) => (
     <div>
-      {props.students.map((student, key) => (
-        <StudentEntry student={student} key={key}/>))}
+    {Object.keys(props.students).map((key) => (
+      <StudentEntry student={props.students[key]} key={key}/>))
+    }
     </div>
 );
 

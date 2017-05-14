@@ -2,28 +2,15 @@ import React, { Component } from 'react';
 import StudentList from './StudentList.jsx';
 import Form from './Form.jsx';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-    this.state = props;
-    this.addStudent = this.addStudent.bind(this);
-  }
+const App = (props) => {
 
-  addStudent (newStudent) {
-    this.setState({students: [...this.state.students, newStudent]});
-  }
-
-  render () {
-    const { students } = this.state;
-    return (
-      <div>
-        <h1>Welcome to React-ory</h1>
-        <StudentList students={students} />
-        <Form addStudent={this.addStudent}/>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1>Welcome to React-ory</h1>
+      <StudentList students={props.students} />
+      <Form addStudent={props.addStudent} />
+    </div>
+  );
+};
 
 export default App;
