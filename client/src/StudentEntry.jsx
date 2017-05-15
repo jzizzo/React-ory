@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './styles/style.css';
 
 class StudentEntry extends Component {
   constructor(props) {
@@ -18,15 +19,25 @@ class StudentEntry extends Component {
     const { student } = this.props;
 
     return (
-      <div>
+      <div className="container-fluid .blue">
+        <br />
+        <b>Life before Hack Reactor:</b>
         <br />
         {student.beforeHR}
         <br />
+        <b>Hailing from:</b>
+        <br />
         {student.homeCity}
+        <br />
+        <b>Tech Interests:</b>
         <br />
         {student.interests}
         <br />
+        <b>Coding Experience:</b>
+        <br />
         {student.prevExperience}
+        <br />
+        <b>Random Fact:</b>
         <br />
         {student.randomFact}
         <br />

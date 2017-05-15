@@ -115,6 +115,7 @@ class Form extends Component {
               onChange={this.handleChange} />
           </label>
           <br />
+          <button onClick={this.props.toggleDisplayForm}>Cancel</button>
           <input type="submit" value="Submit" />
         </form>
       </div>
