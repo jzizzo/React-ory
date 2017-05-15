@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './styles/style.css';
 
 class Form extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class Form extends Component {
 
     return (
 
-      <div>
+      <div className={styles.modal}>
         <form onSubmit={this.handleSubmit}>
           <label>
             Preferred name (first and last, and proper pronunciation for either or both if needed - it helps so much!):
@@ -74,8 +75,6 @@ class Form extends Component {
               onChange={this.handleChange} />
           </label>
           <br />
-
-
           <label>
             What city are you coming from to be here at HR?
             <br />
@@ -86,7 +85,6 @@ class Form extends Component {
               onChange={this.handleChange} />
           </label>
           <br />
-
           <label>
             Tech interests?
             <br />
@@ -97,7 +95,6 @@ class Form extends Component {
               onChange={this.handleChange} />
           </label>
           <br />
-
           <label>
             Coding experience?
             <br />
@@ -118,14 +115,6 @@ class Form extends Component {
               onChange={this.handleChange} />
           </label>
           <br />
-
-
-
-
-
-
-
-
           <input type="submit" value="Submit" />
         </form>
       </div>
