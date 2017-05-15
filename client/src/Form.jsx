@@ -4,8 +4,13 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
-      nextId: 4
+      name: '',
+      beforeHR: '',
+      homeCity: '',
+      interests: '',
+      prevExperience: '',
+      randomFact: '',
+      // nextId: 4
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,13 +18,26 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    let newStudent = {id: this.state.nextId, name: this.state.value};
-    this.setState({nextId: this.state.nextId + 1, value: ''});
+    console.log('state name:', this.state)
+    let newStudent = {
+      // id: this.state.nextId,
+      name: this.state.name,
+      beforeHR: this.state.beforeHR
+    };
+    this.setState({
+      // nextId: this.state.nextId + 1,
+      name: '',
+      beforeHR: ''
+    });
     this.props.addStudent(newStudent);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    console.log('ETN:', event.target.name);
+    console.log('ETV', event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }
 
   render () {
@@ -29,12 +47,25 @@ class Form extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Name:
+            Preferred name (first and last, and proper pronunciation for either or both if needed - it helps so much!):
+            <br />
             <input
+              name="name"
+              type="text"
+              value={this.state.name}
+              onChange={this.handleChange} />
+          </label>
+          <br />
+          <label>
+            What have you been up to before Hack Reactor?:
+            <br />
+            <input
+              name="beforeHR"
               type="text"
               value={this.state.value}
               onChange={this.handleChange} />
           </label>
+          <br />
           <input type="submit" value="Submit" />
         </form>
       </div>

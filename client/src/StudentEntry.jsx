@@ -9,7 +9,13 @@ class StudentEntry extends Component {
     const { student } = this.props;
     return (
       <div>
-        {student.name}
+        <br />
+        <li>
+          {student.name}
+        </li>
+        <br />
+        {student.beforeHR}
+        <br />
       </div>
     );
   }

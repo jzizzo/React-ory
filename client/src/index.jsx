@@ -25,6 +25,7 @@ const actions = {
 
 fb.on('value', snapshot => {
   const store = snapshot.val();
+  console.log(store);
   ReactDOM.render(
     <App {...actions} {...store} />,
     document.getElementById('app')
