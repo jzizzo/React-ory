@@ -18,16 +18,24 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log('state name:', this.state)
+    console.log('state name:', this.state);
     let newStudent = {
       // id: this.state.nextId,
       name: this.state.name,
-      beforeHR: this.state.beforeHR
+      beforeHR: this.state.beforeHR,
+      homeCity: this.state.homeCity,
+      interests: this.state.interests,
+      prevExperience: this.state.prevExperience,
+      randomFact: this.state.randomFact
     };
     this.setState({
       // nextId: this.state.nextId + 1,
       name: '',
-      beforeHR: ''
+      beforeHR: '',
+      homeCity: '',
+      interests: '',
+      prevExperience: '',
+      randomFact: ''
     });
     this.props.addStudent(newStudent);
   }
@@ -62,10 +70,62 @@ class Form extends Component {
             <input
               name="beforeHR"
               type="text"
-              value={this.state.value}
+              value={this.state.beforeHR}
               onChange={this.handleChange} />
           </label>
           <br />
+
+
+          <label>
+            What city are you coming from to be here at HR?
+            <br />
+            <input
+              name="homeCity"
+              type="text"
+              value={this.state.homeCity}
+              onChange={this.handleChange} />
+          </label>
+          <br />
+
+          <label>
+            Tech interests?
+            <br />
+            <input
+              name="interests"
+              type="text"
+              value={this.state.interests}
+              onChange={this.handleChange} />
+          </label>
+          <br />
+
+          <label>
+            Coding experience?
+            <br />
+            <input
+              name="prevExperience"
+              type="text"
+              value={this.state.prevExperience}
+              onChange={this.handleChange} />
+          </label>
+          <br />
+          <label>
+            Fun random stuff?
+            <br />
+            <input
+              name="randomFact"
+              type="text"
+              value={this.state.randomFact}
+              onChange={this.handleChange} />
+          </label>
+          <br />
+
+
+
+
+
+
+
+
           <input type="submit" value="Submit" />
         </form>
       </div>

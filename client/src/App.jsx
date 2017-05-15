@@ -10,7 +10,6 @@ const App = (props) => {
       <h4>Students:</h4>
       <StudentList students={props.students} />
       <br />
-      <br />
       <h4>Join React-ory</h4>
       <Form addStudent={props.addStudent} />
     </div>

@@ -9,12 +9,20 @@ class StudentEntry extends Component {
     const { student } = this.props;
     return (
       <div>
-        <br />
+      <br />
         <li>
           {student.name}
         </li>
         <br />
         {student.beforeHR}
+        <br />
+        {student.homeCity}
+        <br />
+        {student.interests}
+        <br />
+        {student.prevExperience}
+        <br />
+        {student.randomFact}
         <br />
       </div>
     );
