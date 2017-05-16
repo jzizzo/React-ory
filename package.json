@@ -1,13 +1,13 @@
 {
   "name": "react-ory",
-  "version":  "1.0.0",
+  "version": "1.0.0",
   "description": "The unofficial Hack Reactor student directory",
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js"
   },
-  "author": "Joseph Zizzo & Gunpreet Singh",
+  "author": "Joseph Zizzo",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -21,15 +21,19 @@
     "bcrypt": "^0.8.6",
     "body-parser": "^1.17.0",
     "bookshelf": "^0.9.5",
+    "bootstrap": "^4.0.0-alpha.2",
+    "css-loader": "0.23.1",
     "cookie-parser": "^1.4.2",
     "express": "^4.15.0",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.13.0",
+    "firebase": "^3.9.0",
     "jquery": "^3.1.1",
     "knex": "^0.10.0",
     "passport": "^0.3.2",
     "pg": "^4.5.5",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "style-loader": "0.13.1"
   }
 }

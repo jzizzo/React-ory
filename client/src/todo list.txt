@@ -1,0 +1,22 @@
+todo list:
+
+Priorities: 
+1. Expand form data (ask them for pic URL) 
+2. Make ui pretty 
+3. Add real picture upload 
+4. Auth
+
+
+
+
+-Preferred name (first and last, and proper pronunciation for either or both if needed - it helps so much!)
+
+-What have you been up to before Hack Reactor?
+
+-What city are you coming from to be here at HR?
+
+-Tech interests?
+
+-Coding experience?
+
+-Fun random stuff?

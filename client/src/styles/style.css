@@ -1,0 +1,28 @@
+.App {
+  background: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 40px;
+  display: block;
+}
+
+.list {
+  background: #fff;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.blue {
+  background: #0090d9;
+
+}
