@@ -11,7 +11,6 @@ class Form extends Component {
       interests: '',
       prevExperience: '',
       randomFact: '',
-      // nextId: 4
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +20,6 @@ class Form extends Component {
     event.preventDefault();
     console.log('state name:', this.state);
     let newStudent = {
-      // id: this.state.nextId,
       name: this.state.name,
       beforeHR: this.state.beforeHR,
       homeCity: this.state.homeCity,
@@ -30,7 +28,6 @@ class Form extends Component {
       randomFact: this.state.randomFact
     };
     this.setState({
-      // nextId: this.state.nextId + 1,
       name: '',
       beforeHR: '',
       homeCity: '',
